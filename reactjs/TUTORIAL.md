@@ -46,6 +46,35 @@ yarn.lock/package.lock
 Depedency management version file
 
 
+## Component based architecture
+
+A react app will generally have two kinds of components:
+
+* Functional component
+  - Javascript functions
+  - Dumb components
+  - 'this' keyword
+  -  We can use '<i>hooks</i>' to implement state in function
+
+* Class component
+  - class extends component class
+  - Render method returning html
+  - Can contain private state
+  - For complex UI logic
+  - Provide lifecycle hooks
+  - Also known as Stateful/ Smart/ Container
+
+Check Greet.js from more info
+
+## JSX
+
+* Extension to the Javascript language syntax.
+* Write XML-like code for elements and components.
+* JSX tags have a tag name, attributes & children.
+* JSX is not a necessity to write React applications.
+* Transpiles to pure javascript which is understood by the browsers.
+* its elegant
+
 
 
 
