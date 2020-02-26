@@ -1,7 +1,7 @@
 ReactJS
 ===============
 
-#Basics
+# Basics
 
 * It follows component based architecture (In a website, components can be header,footer, sidenav and main)
 * React is declarative
@@ -15,4 +15,39 @@ ReactJS
   - HTTP
   - Routing
   - Redux
-  - Utilties  
+  - Utilties
+
+## React folder structure:
+
+A typical reactjs project has following folder structure:
+
+node modules (dir)
+-------------  
+This contains all the downloaded libraries mentioned in package.json. This generally gets populated after 'npm install'
+
+
+public (dir)
+--------------
+Contains index.html and all static assets
+
+
+src (dir)
+--------------
+Contains all source code (JS, css, etc)
+
+
+package.json
+---------------
+Used for dependency management. Something similar to Gemfile in Rails.
+
+
+yarn.lock/package.lock
+-----------------------
+Depedency management version file
+
+
+
+
+
+
+
