@@ -83,6 +83,7 @@ Check Greet.js from more info
 * Function parameters
 * props are immutable
 * used as 'props' in Functional Components & 'this.props' in Class Components
+* props can be destructred at class or function level using {}
 
 ## State
 
@@ -95,6 +96,12 @@ Check Greet.js from more info
 * setState - its asynchronous
 * setState - prevState can be used to access prev state
 * setState - props can be used with prevState
+* state can be destructured just like props. {} = this.props
+
+## Event Handling
+
+* We can do event handling using this in Class and regular method in functional components
+* Always do the event binding in class constructor or use event function
 
 
 
