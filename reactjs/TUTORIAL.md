@@ -75,6 +75,26 @@ Check Greet.js from more info
 * Transpiles to pure javascript which is understood by the browsers.
 * its elegant
 
+## Props
+
+* Brings dynamic behavior to the html elements.
+* We can pass parameters to JSX tags
+* Get passed to the component
+* Function parameters
+* props are immutable
+* used as 'props' in Functional Components & 'this.props' in Class Components
+
+## State
+
+* Is managed within the component
+* Variables declared in the function body
+* state can be changed (mutable)
+* useState Hook in functional components & this.state in Class Components
+* Check <b>Message.js</b> in components
+* setState - Helps in mutating state
+* setState - its asynchronous
+* setState - prevState can be used to access prev state
+
 
 
 
