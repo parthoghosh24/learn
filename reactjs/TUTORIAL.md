@@ -94,6 +94,9 @@ Check Greet.js from more info
 * setState - Helps in mutating state
 * setState - its asynchronous
 * setState - prevState can be used to access prev state
+* setState - props can be used with prevState
+
+
 
 
 
