@@ -94,6 +94,7 @@ Check Greet.js from more info
 * setState - Helps in mutating state
 * setState - its asynchronous
 * setState - prevState can be used to access prev state
+* eventBinding - Please refer <b>Subscribe.js</b>
 
 
 

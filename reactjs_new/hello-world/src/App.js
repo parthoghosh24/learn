@@ -4,13 +4,15 @@ import { Greet } from './components/Greet';
 import Welcome from './components/Welcome';
 import Message from './components/Message';
 import Counter from './components/Counter';
+import Subscribe from './components/Subscribe';
 
 class App extends Component{
   render()
   {
     return (
       <div className="App">
-        <Counter/>
+        <Subscribe/>
+        {/* <Counter/> */}
         {/* <Message/> */}
         {/* <Greet/>
         <Welcome superhero="Batman">
