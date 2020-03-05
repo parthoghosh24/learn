@@ -96,6 +96,10 @@ Check Greet.js from more info
 * setState - prevState can be used to access prev state
 * eventBinding - Please refer <b>Subscribe.js</b>
 
+## Parent child communication in components
+
+* We can send Child data to parents via props. Refer <b>ParentComponent.js</b> and <b>ChildComponent.js</b> 
+
 
 
 

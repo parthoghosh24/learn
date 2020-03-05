@@ -7,6 +7,7 @@ class Subscribe extends Component {
         this.state ={
             message: "Click to subscribe"
         }
+        // this.subscribeClick = this.subscribeClick.bind(this)
     }
     // Event binding
     subscribeClick=()=>{
