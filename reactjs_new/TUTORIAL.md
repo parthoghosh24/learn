@@ -100,8 +100,19 @@ Check Greet.js from more info
 
 * We can send Child data to parents via props. Refer <b>ParentComponent.js</b> and <b>ChildComponent.js</b> 
 
+## Conditional rendering
 
+* Four ways to achieve this:
+ - If else
+ - environmental variables using let
+ - ternary operator
+ - &&
 
+ ## List rendering
 
+* We achieve this via 'map' function in javascript.
+* Standard is to define a common component for each list item
+* key plays an important role react lists as it helps react render and update list efficiently
+* Avoid using list index as key
 
 

@@ -6,13 +6,17 @@ import Message from './components/Message';
 import Counter from './components/Counter';
 import Subscribe from './components/Subscribe';
 import ParentComponent from './components/ParentComponent';
+import BeepBoop from './components/BeepBoop';
+import List from './components/List';
 
 class App extends Component{
   render()
   {
     return (
       <div className="App">
-        <ParentComponent/>
+        <List/>
+        {/* <BeepBoop/> */}
+        {/* <ParentComponent/> */}
         {/* <Subscribe/> */}
         {/* <Counter/> */}
         {/* <Message/> */}
