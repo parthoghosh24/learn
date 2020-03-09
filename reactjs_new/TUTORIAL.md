@@ -115,4 +115,27 @@ Check Greet.js from more info
 * key plays an important role react lists as it helps react render and update list efficiently
 * Avoid using list index as key
 
+## Applying styles to the html
+* We can apply style by importing the css file
+* We can apply via inline styling. Refer <b>Food.js</b>
+* We can apply css using css modules also to prevent accidental access of css class or id.
 
+## Working with Forms
+* We can use event to handle Form state
+* Please refer <b>Form.js</b> for example
+
+## Lifecycle methods
+* Component lifecycle is used with class components only
+* Four methods in React lifecycle:
+- Mounting - Instance of component created and inserted in DOM. Methods in Mounting are : constructor, static getDerivedStateFromProps, render and ComponentDidMount
+  
+- Updating - Components are re-rendered as a result of change to either its props or state. Methods provided are: static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate and componentDidUpdate
+
+- Unmounting - Component is removed from the DOM. Methods provided are: componentWillMount
+
+- Error Handling - Called if error occured in any of the above stageL Methods provided are: static getDerivedStateFromError and componentDidCatch
+
+## React Fragments
+* React Fragment we can define using React.Fragment to group JSX elemnts.
+* React.Fragment blocks introduction of useless elements in DOM tree.
+* We can use <> or React.Fragment
