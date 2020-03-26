@@ -30,7 +30,7 @@
 
 ## Algorithms
 
-Machine Learning requires multiple alogrithms for multiple purpose. We will go through those via following:
+Machine Learning requires multiple alogrithms for modeling (Precursor to prediction). We will go through those via following:
 
 #### Linear Regression Model
 
@@ -51,7 +51,7 @@ Following are the uses:
 
 1. <b><u>Determining the strength of predictors</u></b>: Relationship between dose and effect, Sales and marketing spending or age and income.
 
-2. <b><u>Forecasting an effect</u></b>: How the (y) changes in if there is a change in (X). For e.g, how much sales we can expect if add 1000$ more to marketing budget.
+2. <b><u>Forecasting an effect</u></b>: How the (y) changes in if there is a change in (X). For e.g, how much sales we can expect if add 1000$ more to marketing budget
 
 3. <b><u>Predicting trend and future values</u></b>: Can be used to get point estimates. For e.g, price of gold in 6 months.
 
@@ -59,3 +59,18 @@ Following are the uses:
 ##### How to use it via Scikit
 
 Scikit-learn provides LinearRegression model as one the model objects. 
+
+#### Robust Regression Model
+
+Issue with Linear Regression is that sometimes Linear Regression can go wrong (outliers messes data) if its <a href="https://www.statisticssolutions.com/assumptions-of-linear-regression/">assumptions</a> are violated.
+
+To tackle this issue, we can use RANSAC (RANdom SAmple Consensus) algorithm. RANSAC does following in each iteration:
+
+1. Select min_samples random samples from the original data and check whether the set of data is valid.
+2. Fit a model to the random subset (base_estimator.fit) and check whether the estimated model.
+3. Classify all data as inliers or outliers by calculating the residuals to the estimated model (base_estimator.predict(X)-y) - all data samples with absolute < residual_threshold are considered inliers.
+4. Save fitted model as best model if number of inlier samples is maximal. In case the current estimated model has same number of inliers, it is considered as the best model if it has better score.
+
+
+
+
