@@ -104,6 +104,35 @@ We can use Correlation Matrix (eigenvalue and eigenvector) to resolve this issue
 
 We can use StandardScaler (sklearn) and make_pipeline for feature identification. Another way we can do feature identification is using $R^2$
 
+#### Regularized Regression
+
+To regularized our regression model(s), we sometimes use following methods:
+
+* <b><u>Ridge Regression</u></b>- Can't 0 out coefficients; you either end up including all the coefficients in the model, or none of them.
+* <b><u>LASSO</u></b>- does both parameter shrinkage and variable selection automatically
+* <b><u>Elastic Net</u></b>- If some of your covariates are highly correlated, you may want to look at the <b>Elastic Net</b> instead of the <b>LASSO</b>
+
+Refer internet for more
+
+
+### Polynomial Regression
+
+We use Polynomail Regression when we have non-linear relationship. We can use PolynomialFeatures from Scikit-learn for the same.
+
+A polynomial function would look like $y = b_0 + Xb_1 + X^2b_2 + X^3b_3... $
+
+#### Non-linear Relationships
+
+Linear Regression and Least square methods are generally not useful for non-linear relationships. To deal with those relationships, we generally use classification.
+
+##### Classification
+
+It is generally binary in nature. We classify things in this for example an object can be classified as Car, Animal, etc.
+
+##### Regression
+
+We generally use it for trend or forcasting. 
+
 
 
 
