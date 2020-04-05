@@ -123,7 +123,7 @@ A polynomial function would look like $y = b_0 + Xb_1 + X^2b_2 + X^3b_3... $
 
 #### Non-linear Relationships
 
-Linear Regression and Least square methods are generally not useful for non-linear relationships. To deal with those relationships, we generally use classification.
+Linear Regression and Least square methods are generally not useful for non-linear relationships. To deal with those relationships, we generally use classification or tree based regression
 
 ##### Classification
 
@@ -132,6 +132,22 @@ It is generally binary in nature. We classify things in this for example an obje
 ##### Regression
 
 We generally use it for trend or forcasting. 
+
+##### Ways to work with non-linear relationships
+
+If we have continuous dependent data, then we can use any of the following to determine non-linear relationships:
+
+1. <b>Decision Tree Regression: </b> Users entire feature set to create the model. 
+2. <b>Random Forest (Bagging): </b> Uses random features to create random decision trees and the averages the result
+3. <b>ADA Boost (Boosting): </b> Creates multiple models from random features and train them sequentially while minimizing the mistakes from previous models.
+
+We need to careful of overfitting or underfitting of our models. <b>Overfitting</b> means model worked to accurately for trained data but for does not work fine for test data.
+
+<b>Underfitting</b> means model did not work good for train data.
+
+Our goal is to achieve the sweet part between the two.
+
+Above regression techiques also helps us identify important features.
 
 
 
