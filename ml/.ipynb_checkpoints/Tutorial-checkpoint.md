@@ -27,6 +27,29 @@
     - For supervised learned, often we predict labels for unknown data using the predict() method
     - For unsuprevised learned, we often transform or infer properties of the data using the transform() or predict() method
 
+## Data Pre-Processing
+
+Data pre-processing is a very important step we ought to do before we start to train. 
+
+This is required to achieve gradient descent. 
+
+One important thing to keep in mind is that we should pre-process only training data and the use the same scalar with test data (never 'fit' with test data).
+
+We can process data as follows:
+
+* <b>Standardization / Mean Removal</b> Data is centered on zero to remove bias. Individual feature should look more like normally distributed. With mean 0 and std dev 1.
+* <b>Min-Max or Scaling feature to a Range</b> Scaling features to lie between a given min and max, often between 0 and 1, or so the max abs value of each feature is scaled to unit size.
+* <b>MaxAbsScaler</b> Works in a similar fashion but the range is [-1,1]
+* <b>Normalization</b> Process of scaling individual samples to have unit norm. Two kind of normalizations
+    - <b>L1 </b> Least absolute Deviations ensure the sum of absolute values is 1 in each row
+    - <b>L2 </b> Least squares, Ensure that the sum of squares is 1.
+* <b>Binarization</b> Process of setting a threshold via which we either return 0 or 1 (boolean values)
+* <b> Label Encoder</b> Works like Enumeration.
+* <b>One Hot/One-of-K Encoding</b> Process of turning a series of categorical responses into a set of binary result (0 or 1)
+
+
+
+
 
 ## Algorithms
 
