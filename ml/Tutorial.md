@@ -172,7 +172,30 @@ Our goal is to achieve the sweet part between the two.
 
 Above regression techiques also helps us identify important features.
 
+#### Bias Variance Trade off
 
+Two common errors which prevent supervised learning algos from generalizing beyond their training set. The errors are as follows:
+
+* <b>Bias</b> is an error from erroneous assumptions in the learnin algo. High bias can cause underfitting (miss relevant relationship between feattures and targets)
+
+* <b>Variance</b> is an error from sensitivity to small fluctuations in the training set. This can cause overfitting (can cause an algo to model the random noise in the training data)
+
+##### Validation Curve
+
+We generally split data into 3 sections: training, test and validation (it can 80/10/10 split)
+
+Training data is the one which we submit to develop our prediction model.
+
+##### Learning Curve
+
+Shows the validation and training score of an estimator for varying numbers of training samples.
+
+A tool to find out how much we benefit from adding more training data and whether the estimator suffers more from a variance error or a bias error.
+
+When we low data the accuracy of training data can be high and accuracy of test data can be really low. As we add more data, we tend to move towards our desired performance.
+
+
+##### Cross Validation (CV)
 
 
 
