@@ -192,10 +192,78 @@ Shows the validation and training score of an estimator for varying numbers of t
 
 A tool to find out how much we benefit from adding more training data and whether the estimator suffers more from a variance error or a bias error.
 
-When we low data the accuracy of training data can be high and accuracy of test data can be really low. As we add more data, we tend to move towards our desired performance.
+When we have low data the accuracy of training data can be high and accuracy of test data can be really low. As we add more data, we tend to move towards our desired performance.
 
 
 ##### Cross Validation (CV)
 
+CV basically helps us get rid of creating validation sets while training a model. Generally we split data in test+validtion+train. 
+CV helps us removing validation
+
+CV has two approaches:
+
+* ##### k-fold method
+
+In this, training set is split into k smaller sets. Then following procedure takes place:
+ 1) A model is trained using k-1 of the folds as training data
+ 
+ 2) The resulting model is validated on the remaining part of the data (i.e, it is used as a test set to compute performance measure such as accuracy)
+ 
+ Then we average the values computed in the loop
+ 
+ A specialized form of this method is called Stratified k-fold cross-validation (better bias and variance estimates in case of unequal class proportions)
+ 
+ 
+ * ##### holdout method
+ 
+     -  Split initial dataset into a separate training and test set.
+     - Training dataset - model training
+     - Test dataset - estimates its generalisation performance
+     
+  Sometimes we split training dataset into further two sets training set and validation set. It helps us determine hyperparams   
+
+<b>Some more concepts</b>:
+
+* Pipeline: We can string multiple metods together
+* Standard Scaler: Used for pre-processing of data
+* PCA (Principal Component Analysis) : Summarizes the data
 
 
+### Logistic Regression
+
+Go-to linear classification algorithm for two-class problems.
+
+Logistic regression is named for the function used at the core of the method, Logistic function
+
+Logistic function/ Sigmoid function is an S-shaped curve that can take any real-valued number and map it into a value between 0 and 1, but never exactly at those limits.
+
+$1/(1+e^-x)$ ; e= base for natural log, x = value to be transformed
+
+#### Learning the Logistic Regression Model
+
+The coefficients (Beta values b) of the logistic regression algo must be estimated from training data:
+* Generally done using maximum-likelihood estimation.
+* MLE is a common learning algoritthm.
+* Best coefficents would result in a model that would predict a value close to 1 for the default class and 0 for other class
+* The intution for MLE is that a search procedure seeks values for the coeffs that minimize the error in the probabilities predicted by the model to those in the data.
+
+<b>Prediction using Logistic Reg</b>: $\hat{y} = \frac{1.0}{1.0 + e^{-b_0-b_1x_i}}$
+  where $b_0$ is intercept term and $b_1$ coeff of $x_i$. Result of function is either 0 or 1 or inbetween which we need to normalize
+
+
+We can use LogisiticRegression from scikit learn to implement
+
+One important function provided by LR in scikit is predict_proba. It is very useful in lets say vision systems where we are trying to predict for e.g 80% probability that object is cat.
+
+### Classification
+Supervised learning: data comes with additional attributes that we want to predict. This problem can be either:
+
+* <b>Classification</b>: Samples belongs 2 or more classes and we want to learn from already labeled data how to predict the class of unlabeled data.
+
+* <b>Regression</b>: If desired output consists of one or more continuous variables.
+
+One comman algo for classifcation is SGD (Stochastic Gradient Descent)and we can use SGDClassifier training to predict classification problems
+
+#### Classification performance measures
+
+  
