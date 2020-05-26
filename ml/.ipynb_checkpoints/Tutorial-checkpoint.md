@@ -386,3 +386,30 @@ We can also do regression using Support Vectors and all the above algorithms are
 * Beware of overfiting when num_features > num_samples.
 * Choice of Kernel and Regularization can have a large impact on performance
 * No probability estimates
+
+
+### Tree
+
+CART (Classification and Regression Tree)
+
+* Supervised Learning
+* Works for both classification and regression
+* Foundation of random forests
+* Attractive because of interpretability
+
+Decision tree works by:
+* Split based on set impurity criteria
+* Stopping criteria (gini=0)
+
+<b>Advantages:</b>
+* Simple to understand and easier to be visualised
+* Requires little data prep
+* Able to handle both numerical and categorical data
+* Possible to validate a model using statsical tests
+* Performs well even if its assumptions are somewhat violated by the true model from which the data were generated
+
+<b>Disadvantages:</b>
+* Overfiting. Pruning and setting maximum depth can help
+* These are unstable. Mitigant. Use trees in ensemble
+* Cannot guarantee to return the globally optimal decision tree
+* Decision tree learners create biased trees if some classes dominate.
