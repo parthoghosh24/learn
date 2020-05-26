@@ -266,4 +266,123 @@ One comman algo for classifcation is SGD (Stochastic Gradient Descent)and we can
 
 #### Classification performance measures
 
+  <b>Stratiefied k fold</b>
   
+  Stratiefied sampling to make multiple folds
+  At each iteration, the classifer is cloned and training folds and makes predictions on the test fold
+  
+  Stratiefied K Fold utilised the Stratified Samplning concept
+  * The population is divied into homogeneous subgroups called strata
+  * The right number of instances is sampled from each stratum
+  * To guarantee that the test set is representative of population
+  
+  
+  <b>Cross-validation k-fold</b>
+  
+  K-fold cross-validation splits the training set into K-folds and then make predictions and evaluate them on each fold using a model trained on the remaining folds.
+  
+#### Confusion Matrix
+
+Accuracy is not the preferred performance measure for classifiers.
+
+                            Predicted
+                          Negative      Postive 
+             Negative     true -ve     false +ve
+       Actual             
+             Positive     false -ve     true +ve
+             
+Our correct values in above matrix are 1st and last quadrant.
+
+##### Precision
+
+Measure for prediction of positive predictions in CM
+
+$precison = \frac{True Positive}{True Positives + False Positives}$
+
+##### Recall
+
+Its also knows as True positive rate or sensitivity.             
+
+$recall = \frac{True Positive}{True Positives + False Negatives}$
+
+##### F1 score
+
+F1 score is harmonic mean of precision and recall. Harmonic mean gives more weight to low values
+
+$F1 = \frac{2}{\frac{1}{precision}+\frac{1}{recall}}$
+
+##### Precision Recall tradeoff
+
+Increasing precison reduces recall
+
+Some place we need high precision. Like desigining a classifier that picks up adult contents to protect kids.
+
+Some place we need high recall. Like detecting shoplifters on surveillance image. Anything remotely "positive" instances to be picked up.
+
+
+##### ROC (Reciver Operator Characteristics curve)
+
+Instead of plotting precision versus recall, the ROC curve plots the true positive rate(recall) against the FPR (False positive rate). FPR is ratio of negative instances that are incorrectly classifed as postive. It is equal to one minus the true negative rate, which is the ratio of negative instances that are correctly classifed as negative.
+
+The TNR is also called specificity. Hence, ROC plots sensitivity vs 1-specificity
+
+#### SVM (Support Vector Machine)
+
+Supervised learning methods used for classification, regression and outliers detection
+
+Suppose we have two set of classes.
+
+SVM is the line that allows for largest margin between two classes.
+
+#### Linear SVM
+* Support Vectors
+* Linearly separable
+* Margin
+ - Hard margin classification
+   - Strictly based on those that are the margin between two classes.
+   - However, this is sensitive to outliers.
+ - Soft margin classification
+   - Widen the margin and allows for violation
+   - With Python Sckit-learn, you control the width of the margin
+   - Control with C param
+     - Smaller C leads to a wider street but more margin violations
+     - High C leads to fewer margin violations but ends up with a smaller margin
+
+SVM are sensitive to feature scaling
+
+Steps for Linear SVM:
+* load data
+* split data from train and test
+* scale features (can use StandardScaler)
+* define C
+* initialize Support Vector classifier
+* fit the model in classifer
+
+### Polynomial SVM
+
+Rather than separating classes Linearly, we do it in 'polynomial' way. That way we achieve more flexibility and better result. But be mindful of tuning of the options as it can cause overfitting
+
+### Gaussian Radial Basis Function SVM
+
+Similar to Polynomial SVM.
+
+We can also do regression using Support Vectors and all the above algorithms are used
+
+#### Advantages and Disadvantages of SVM
+
+<b>Advantages:</b>
+
+* Effective in high dimensional spaces
+* Uses only a subset of traning points(support vectors) in the decision function.
+* Many different kernels functions can be specified for the decision function:
+ - Linear
+ - Polynomial
+ - RBF
+ - Sigmoid
+ - Custom
+ 
+ 
+<b>Disadvantages:</b>   
+* Beware of overfiting when num_features > num_samples.
+* Choice of Kernel and Regularization can have a large impact on performance
+* No probability estimates
