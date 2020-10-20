@@ -490,4 +490,15 @@ As per scikit learning:
 
 - Please refer Adaboost.pynb for more reference
 
+### Gradient Boosting Machine
+
+* Works for both regression and classification
+* Sequentially adding predictors
+* Each one correcting its predecessor
+* Fit new predictors to the residual errors
+
+It involves 3 elements:
+* Loss functions to be optimized (in regression loss funct is mean squared error and in classifcation, lograthimic loss will be used
+* Weak learner to make predictions (decision tree is used as weak learner)
+* Additive model to add weak learners to minimize the loss function (trees are added one at a time and existing trees are not changed. Gradient descent is used to minimize the loss)
 
