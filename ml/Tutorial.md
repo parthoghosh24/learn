@@ -455,3 +455,10 @@ There are various kind of techniques:
     - RF: Sample from predictors.m=sqrt(p) for classification and m=p/3 for regression problems
 * Utilize uncorrelated trees
 
+##### Random Forest
+* Samples both observations and features of training data
+
+##### Bagging
+* Samples only observations at random
+* Decision tree selects best feature when splitting a node 
+
