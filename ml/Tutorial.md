@@ -413,3 +413,59 @@ Decision tree works by:
 * These are unstable. Mitigant. Use trees in ensemble
 * Cannot guarantee to return the globally optimal decision tree
 * Decision tree learners create biased trees if some classes dominate.
+
+### Ensemble
+
+Based on supervised learning. We combine multiple types of ML models (predictors) so that they complement each other.
+
+There are various kind of techniques:
+* Bagging (Bootstrap Aggregating)
+    - Sampling with replacement
+    - Combine by averaging the output (regression)
+    - Combine by voting (classification)
+    - Can be applied to many classifiers which includes ANN, CART, etc.
+    
+* Pasting
+    - Sampling without replacement
+    
+* Boosting
+   - Train weak classifers
+   - Add them to a final strong classifer by weighting. Weighting by accuracy (typically)
+   - Once added, the data are reweighted
+       - Misclassifed samples gain weight
+       - Correctly classified samples lose weight (Exceptions: Boost by majority and BrownBoost - decrease the weight of repeatedly misclassifed examples).
+       - Algo are forced to learn more from misclassified samples.
+* Stacking
+  - Also known as Stacked generalization.
+  - Combine info from multiple predictive models to generate a new model.
+  - Training a learning algorithm to combine the predictions of several other learning algorithms.
+    - Step 1: Train learning algo
+    - Step 2: Combiner algo is trained using algo predictions from step 1
+    
+ 
+#### Bagging Technique
+
+- Refer bagging_tut.pynb in google collaboratory in drive
+
+#### Random Forest and extra trees
+
+* Ensemble of Decision Trees
+* Training via the bagging method (Repeated sampling with replacement)
+    - Bagging: Sample with Samples
+    - RF: Sample from predictors.m=sqrt(p) for classification and m=p/3 for regression problems
+* Utilize uncorrelated trees
+
+##### Random Forest
+* Samples both observations and features of training data
+
+##### Bagging
+* Samples only observations at random
+* Decision tree selects best feature when splitting a node 
+
+##### Random forest example
+- Refer random_forest.pynb from drive google collab or in this repo.
+
+##### Extra-trees (Extremely Randomized trees) example
+- This performs better than random_forest but increased the bias slightly. Again refer the above pynb
+
+
