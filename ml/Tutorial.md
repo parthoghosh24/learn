@@ -468,4 +468,24 @@ There are various kind of techniques:
 ##### Extra-trees (Extremely Randomized trees) example
 - This performs better than random_forest but increased the bias slightly. Again refer the above pynb
 
+### Ada Boost
+
+#### Boosting
+* Combine several weak learners into a strong learner.
+* Train predictors sequentially
+
+#### Adaboost/ Adaptive boost
+
+* It is similar to human learning. The algo learns from past mistakes by focusing more on difficult problems it did not get right in prior learnings.
+* From machine learning perspective, it pays more attention to training instances which previously underfitted.
+
+As per scikit learning:
+* Fit a sequence of weak learners (i.e, models that are only slightly better than random guessing such as small decision trees) on repeatedly modified versions of data.
+* The predictions from all of them are then combined through a weighted majority vote (or sum) to produce the final prediction.
+* The data modifications at each so-called boosting iteration consist of applying weights w1, w2....wN to each of the training samples.
+* Initially, all those weights are all set to wi = 1/N, so that first step simply trains a weak learner on the original data.
+* For each successive iteration, the sample weights are individually modified and the learning algo is reapplied to the reweighted data.
+* At a given step, those training examples that were incorrectly predicted by the boosted model induced at the previous step have their weights increased, whereas the weights are decreased for those that were predicted correctly.
+* As iterations proceed, examples that are difficult to predict receive ever-increasing influence. Each subsequent weak learner is thereby forced to concentrate on the examples that are missed by the previous ones in the sequence.
+
 
