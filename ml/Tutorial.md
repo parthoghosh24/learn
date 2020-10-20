@@ -443,3 +443,15 @@ There are various kind of techniques:
     - Step 2: Combiner algo is trained using algo predictions from step 1
     
  
+#### Bagging Technique
+
+- Refer bagging_tut.pynb in google collaboratory in drive
+
+#### Random Forest and extra trees
+
+* Ensemble of Decision Trees
+* Training via the bagging method (Repeated sampling with replacement)
+    - Bagging: Sample with Samples
+    - RF: Sample from predictors.m=sqrt(p) for classification and m=p/3 for regression problems
+* Utilize uncorrelated trees
+
