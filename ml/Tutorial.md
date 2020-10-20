@@ -462,3 +462,10 @@ There are various kind of techniques:
 * Samples only observations at random
 * Decision tree selects best feature when splitting a node 
 
+##### Random forest example
+- Refer random_forest.pynb from drive google collab or in this repo.
+
+##### Extra-trees (Extremely Randomized trees) example
+- This performs better than random_forest but increased the bias slightly. Again refer the above pynb
+
+
